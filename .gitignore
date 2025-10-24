@@ -1,0 +1,147 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+.conda/
+
+# Miniconda
+miniconda3/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# 로그 파일
+logs/
+*.log
+*.csv
+*.txt
+call_log_*.csv
+sensor_data_*.csv
+error_log_*.txt
+
+# 출력 파일
+output/
+*.xlsx
+reliability_report_*.xlsx
+
+# Mock Serial 통신 폴더
+mock_serial_comm/
+communication-pc/mock_serial_comm/
+virtual-sensor-pc/mock_serial_comm/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Spyder
+.spyderproject
+.spyproject
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# 테스트 관련
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# 임시 파일
+*.tmp
+*.temp
+*.bak
+*.swp
+~*
+
+# 데이터베이스
+*.db
+*.sqlite
+*.sqlite3
+
+# 압축 파일
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# 백업 폴더
+backup/
+old/
+archive/
+
+# 문서 빌드
+docs/_build/
+site/
