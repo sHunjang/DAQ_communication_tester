@@ -57,6 +57,7 @@ sensor_data_*.csv
 error_log_*.txt
 
 # 출력 파일
+logs/
 output/
 *.xlsx
 reliability_report_*.xlsx
