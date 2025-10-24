@@ -85,35 +85,6 @@ RS485/RS232 통신을 통한 DAQ(Data Acquisition) 장치 신뢰도 자동 측�
 - Miniconda 또는 Anaconda
 - Windows 10/11 (권장)
 
-## 📁 폴더 구조
-
-DaqTester/
-├── communication-pc/ # 통신 PC (데이터 수집)
-│ ├── config/
-│ │ └── config.py # 설정 파일
-│ ├── src/
-│ │ ├── crc16_modbus.py # CRC16 계산
-│ │ ├── daq_protocol.py # DAQ 프로토콜
-│ │ ├── data_parser.py # 데이터 파싱
-│ │ ├── data_logger.py # CSV 로깅
-│ │ ├── reliability_calculator.py # 신뢰도 계산
-│ │ └── excel_exporter.py # Excel 리포트
-│ ├── logs/ # 로그 파일 (자동 생성)
-│ ├── output/ # Excel 리포트 (자동 생성)
-│ ├── mock_serial.py # Mock Serial
-│ ├── test_simple.py # 간단 테스트
-│ └── test_full.py # 전체 기능 테스트
-│
-└── virtual-sensor-pc/ # 가상 센서 PC (DAQ 시뮬레이터)
-├── config/
-│ └── config.py
-├── src/
-│ ├── daq_simulator.py # 센서 데이터 생성
-│ └── ...
-├── logs/
-├── mock_serial.py
-└── test_simple.py
-
 ## 📡 DAQ 프로토콜
 
 ### 프레임 구조
