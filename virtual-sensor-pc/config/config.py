@@ -1,26 +1,30 @@
-"""가상 센서 PC 설정"""
+"""
+=================================================================
+센서 PC 설정 (v3)
+=================================================================
+순수하게 센서 데이터만 생성하는 역할
+"""
 
-USE_MOCK_SERIAL = True
-RS232_PORT = 'COM4'
-BAUDRATE = 115200
-BYTESIZE = 8
-PARITY = 'N'
-STOPBITS = 1
+# RS485 통신 설정 (DAQ와 연결)
+RS485_PORT = 'COM6'
+BAUDRATE = 9600
 TIMEOUT = 1
-LOG_DIR = 'logs'
 
-SENSOR_DATA_RANGES = {
-    'single_phase': {
+# 센서 데이터 범위
+SENSOR_RANGES = {
+    0x01: {  # 단상 전력량계
         'voltage': {'min': 210.0, 'max': 230.0},
         'current': {'min': 5.0, 'max': 20.0},
         'power': {'min': 1.0, 'max': 5.0},
         'energy': {'min': 0, 'max': 99999}
     },
-    'temp_humidity': {
-        'temperature': {'min': 15.0, 'max': 35.0},
-        'humidity': {'min': 30.0, 'max': 80.0}
+    0x07: {  # 온습도 센서
+        'temperature': {'min': -20.0, 'max': 50.0},
+        'humidity': {'min': 20.0, 'max': 90.0}
     },
-    'co2': {'ppm': {'min': 400, 'max': 1500}}
+    0x06: {  # CO2 센서
+        'ppm': {'min': 400, 'max': 2000}
+    }
 }
 
-SIMULATION_SENSORS = [0x01, 0x07, 0x06]
+LOG_DIR = 'logs'

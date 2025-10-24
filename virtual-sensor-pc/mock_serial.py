@@ -64,10 +64,10 @@ class MockSerial:
         # 포트 쌍 매핑 정의
         # COM3로 보낸 데이터는 COM4가 받고, COM4로 보낸 데이터는 COM3가 받음
         self._port_pairs = {
-            'COM3': 'COM4',
+            'COM3': 'COM4',  # 통신 PC ↔ DAQ
             'COM4': 'COM3',
-            'COM1': 'COM2',
-            'COM2': 'COM1',
+            'COM5': 'COM6',  # DAQ ↔ 센서 PC
+            'COM6': 'COM5',
         }
         
         # =================================================================
