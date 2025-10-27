@@ -55,7 +55,7 @@ class CommunicationThread(QThread):
     """
     백그라운드에서 DAQ 통신을 수행하는 스레드
     
-    GUI를 멈추지 않고 연속적으로 통신을 수행합니다.
+    GUI를 멈추지 않고 연속적으로 통신을 수행
     """
     
     # 시그널 정의 (스레드 → GUI 데이터 전달)
@@ -89,8 +89,8 @@ class CommunicationThread(QThread):
         
         # Mock Serial 초기화
         try:
-            cleanup_mock_files()
-            time.sleep(0.5)
+            # cleanup_mock_files()
+            # time.sleep(0.5)
             
             self.ser = MockSerial(port=self.port, baudrate=self.baudrate, timeout=5)
             self.log_message.emit("SUCCESS", f"포트 {self.port} 연결 성공")
@@ -264,7 +264,7 @@ class MainWindow(QMainWindow):
     
     def init_ui(self):
         """UI 초기화"""
-        self.setWindowTitle("DAQ 통신 신뢰도 측정 시스템 v1.0")
+        self.setWindowTitle("DAQ 통신 신뢰도 측정 시스템")
         self.setGeometry(100, 100, 1200, 800)
         
         # 중앙 위젯

@@ -49,9 +49,9 @@ def main():
     print("-"*70)
     
     # 이전 통신 파일 정리
-    if USE_MOCK_SERIAL:
-        cleanup_mock_files()
-        time.sleep(0.5)
+    # if USE_MOCK_SERIAL:
+    #     cleanup_mock_files()
+    #     time.sleep(0.5)
     
     # 프로토콜 및 파서 초기화
     protocol = DAQProtocol()
