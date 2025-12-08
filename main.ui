@@ -1,0 +1,3502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>644</width>
+    <height>741</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>근로 복지 공단DAQ Slave 테스트 프로그램_251105</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="com_group">
+      <property name="title">
+       <string>Com</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="1" column="1">
+        <widget class="QComboBox" name="baudrate_combo">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <property name="currentIndex">
+          <number>4</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>9600</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>19200</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>38400</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>57600</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>115200</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>COM</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Baudrate</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="com_open_btn">
+         <property name="text">
+          <string>Open</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QPushButton" name="com_close_btn">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Close</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="com_combo">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="3">
+     <widget class="QGroupBox" name="device_group">
+      <property name="title">
+       <string>장치 별 응답 선택</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_15">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="device_tab">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tag1p2w_tab">
+          <attribute name="title">
+           <string>단상</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="tag1p2w_7_group">
+             <property name="title">
+              <string>7번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_98">
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_7_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_7_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_7_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="tag1p2w_5_group">
+             <property name="title">
+              <string>5번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_96">
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_5_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_5_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_5_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QGroupBox" name="tag1p2w_8_group">
+             <property name="title">
+              <string>8번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_99">
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_8_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_8_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_8_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="tag1p2w_6_group">
+             <property name="title">
+              <string>6번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_97">
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_6_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_6_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_6_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QGroupBox" name="tag1p2w_4_group">
+             <property name="title">
+              <string>4번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_95">                                                                                                
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_4_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_4_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_4_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="tag1p2w_2_group">
+             <property name="title">
+              <string>2번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_93">
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_2_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_2_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_2_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QGroupBox" name="tag1p2w_9_group">
+             <property name="title">
+              <string>9번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_100">
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_9_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_9_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_9_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="tag1p2w_0_group">
+             <property name="title">
+              <string>0번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_91">
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_0_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_0_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_0_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="tag1p2w_3_group">
+             <property name="title">
+              <string>3번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_94">
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_3_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_3_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_3_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="tag1p2w_1_group">
+             <property name="title">
+              <string>1번</string>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_92">
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_1_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_1_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag1p2w_1_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tag3p3w_tab">
+          <attribute name="title">
+           <string>3상3선</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_17">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="tag3p3w_0_group">
+             <property name="title">
+              <string>0번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_101">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_0_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_0_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_0_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="tag3p3w_1_group">
+             <property name="title">
+              <string>1번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_102">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_1_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_1_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_1_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="tag3p3w_2_group">
+             <property name="title">
+              <string>2번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_103">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_2_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_2_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_2_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="tag3p3w_3_group">
+             <property name="title">
+              <string>3번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_104">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_3_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_3_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_3_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QGroupBox" name="tag3p3w_4_group">
+             <property name="title">
+              <string>4번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_105">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_4_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_4_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_4_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="tag3p3w_5_group">
+             <property name="title">
+              <string>5번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_106">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_5_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_5_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_5_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="tag3p3w_6_group">
+             <property name="title">
+              <string>6번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_107">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_6_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_6_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_6_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="tag3p3w_7_group">
+             <property name="title">
+              <string>7번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_108">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_7_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_7_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_7_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QGroupBox" name="tag3p3w_8_group">
+             <property name="title">
+              <string>8번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_109">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_8_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_8_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_8_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QGroupBox" name="tag3p3w_9_group">
+             <property name="title">
+              <string>9번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_110">
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_9_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_9_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p3w_9_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tag3p4w_tab">
+          <attribute name="title">
+           <string>3상4선</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_18">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="tag3p4w_0_group">
+             <property name="title">
+              <string>0번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_111">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_0_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_0_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_0_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="tag3p4w_1_group">
+             <property name="title">
+              <string>1번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_112">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_1_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_1_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_1_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="tag3p4w_2_group">
+             <property name="title">
+              <string>2번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_113">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_2_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_2_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_2_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="tag3p4w_3_group">
+             <property name="title">
+              <string>3번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_114">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_3_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_3_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_3_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QGroupBox" name="tag3p4w_4_group">
+             <property name="title">
+              <string>4번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_115">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_4_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_4_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_4_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="tag3p4w_5_group">
+             <property name="title">
+              <string>5번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_116">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_5_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_5_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_5_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="tag3p4w_6_group">
+             <property name="title">
+              <string>6번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_117">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_6_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_6_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_6_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="tag3p4w_7_group">
+             <property name="title">
+              <string>7번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_118">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_7_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_7_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_7_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QGroupBox" name="tag3p4w_8_group">
+             <property name="title">
+              <string>8번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_119">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_8_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_8_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_8_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QGroupBox" name="tag3p4w_9_group">
+             <property name="title">
+              <string>9번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_120">
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_9_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_9_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="tag3p4w_9_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="oil_tab">
+          <attribute name="title">
+           <string>유량</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="oil_0_group">
+             <property name="title">
+              <string>0번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_181">
+              <item>
+               <widget class="QRadioButton" name="oil_0_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_0_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_0_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="oil_1_group">
+             <property name="title">
+              <string>1번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_189">
+              <item>
+               <widget class="QRadioButton" name="oil_1_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_1_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_1_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="oil_2_group">
+             <property name="title">
+              <string>2번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_182">
+              <item>
+               <widget class="QRadioButton" name="oil_2_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_2_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_2_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="oil_3_group">
+             <property name="title">
+              <string>3번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_190">
+              <item>
+               <widget class="QRadioButton" name="oil_3_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_3_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_3_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QGroupBox" name="oil_4_group">
+             <property name="title">
+              <string>4번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_185">
+              <item>
+               <widget class="QRadioButton" name="oil_4_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_4_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_4_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="oil_5_group">
+             <property name="title">
+              <string>5번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_183">
+              <item>
+               <widget class="QRadioButton" name="oil_5_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_5_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_5_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="oil_6_group">
+             <property name="title">
+              <string>6번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_188">
+              <item>
+               <widget class="QRadioButton" name="oil_6_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_6_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_6_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="oil_7_group">
+             <property name="title">
+              <string>7번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_187">
+              <item>
+               <widget class="QRadioButton" name="oil_7_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_7_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_7_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QGroupBox" name="oil_8_group">
+             <property name="title">
+              <string>8번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_184">
+              <item>
+               <widget class="QRadioButton" name="oil_8_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_8_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_8_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QGroupBox" name="oil_9_group">
+             <property name="title">
+              <string>9번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_186">
+              <item>
+               <widget class="QRadioButton" name="oil_9_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_9_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="oil_9_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="water_tab">
+          <attribute name="title">
+           <string>수도</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="water_0_group">
+             <property name="title">
+              <string>0번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_121">
+              <item>
+               <widget class="QRadioButton" name="water_0_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_0_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_0_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="water_1_group">
+             <property name="title">
+              <string>1번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_122">
+              <item>
+               <widget class="QRadioButton" name="water_1_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_1_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_1_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="water_2_group">
+             <property name="title">
+              <string>2번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_123">
+              <item>
+               <widget class="QRadioButton" name="water_2_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_2_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_2_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="water_3_group">
+             <property name="title">
+              <string>3번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_124">
+              <item>
+               <widget class="QRadioButton" name="water_3_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_3_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_3_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QGroupBox" name="water_4_group">
+             <property name="title">
+              <string>4번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_125">
+              <item>
+               <widget class="QRadioButton" name="water_4_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_4_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_4_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="water_5_group">
+             <property name="title">
+              <string>5번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_126">
+              <item>
+               <widget class="QRadioButton" name="water_5_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_5_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_5_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="water_6_group">
+             <property name="title">
+              <string>6번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_127">
+              <item>
+               <widget class="QRadioButton" name="water_6_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_6_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_6_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="water_7_group">
+             <property name="title">
+              <string>7번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_128">
+              <item>
+               <widget class="QRadioButton" name="water_7_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_7_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_7_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QGroupBox" name="water_8_group">
+             <property name="title">
+              <string>8번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_129">
+              <item>
+               <widget class="QRadioButton" name="water_8_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_8_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_8_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QGroupBox" name="water_9_group">
+             <property name="title">
+              <string>9번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_130">
+              <item>
+               <widget class="QRadioButton" name="water_9_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_9_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="water_9_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="co2_tab">
+          <attribute name="title">
+           <string>CO2</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_21">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="co2_0_group">
+             <property name="title">
+              <string>0번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_141">
+              <item>
+               <widget class="QRadioButton" name="co2_0_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_0_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_0_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="co2_1_group">
+             <property name="title">
+              <string>1번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_142">
+              <item>
+               <widget class="QRadioButton" name="co2_1_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_1_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_1_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="co2_2_group">
+             <property name="title">
+              <string>2번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_143">
+              <item>
+               <widget class="QRadioButton" name="co2_2_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_2_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_2_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="co2_3_group">
+             <property name="title">
+              <string>3번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_144">
+              <item>
+               <widget class="QRadioButton" name="co2_3_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_3_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_3_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QGroupBox" name="co2_4_group">
+             <property name="title">
+              <string>4번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_145">
+              <item>
+               <widget class="QRadioButton" name="co2_4_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_4_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_4_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="co2_5_group">
+             <property name="title">
+              <string>5번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_146">
+              <item>
+               <widget class="QRadioButton" name="co2_5_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_5_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_5_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="co2_6_group">
+             <property name="title">
+              <string>6번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_147">
+              <item>
+               <widget class="QRadioButton" name="co2_6_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_6_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_6_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="co2_7_group">
+             <property name="title">
+              <string>7번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_148">
+              <item>
+               <widget class="QRadioButton" name="co2_7_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_7_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_7_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QGroupBox" name="co2_8_group">
+             <property name="title">
+              <string>8번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_149">
+              <item>
+               <widget class="QRadioButton" name="co2_8_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_8_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_8_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QGroupBox" name="co2_9_group">
+             <property name="title">
+              <string>9번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_150">
+              <item>
+               <widget class="QRadioButton" name="co2_9_normal_radio">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_9_crc_radio">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_9_timing_radio">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="temperature_tab">
+          <attribute name="title">
+           <string>온습도</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="co2_0_group_2">
+             <property name="title">
+              <string>0번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_151">
+              <item>
+               <widget class="QRadioButton" name="co2_0_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_0_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_0_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="co2_1_group_2">
+             <property name="title">
+              <string>1번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_159">
+              <item>
+               <widget class="QRadioButton" name="co2_1_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_1_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_1_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="co2_2_group_2">
+             <property name="title">
+              <string>2번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_152">
+              <item>
+               <widget class="QRadioButton" name="co2_2_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_2_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_2_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="co2_3_group_2">
+             <property name="title">
+              <string>3번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_160">
+              <item>
+               <widget class="QRadioButton" name="co2_3_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_3_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_3_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QGroupBox" name="co2_4_group_2">
+             <property name="title">
+              <string>4번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_155">
+              <item>
+               <widget class="QRadioButton" name="co2_4_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_4_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_4_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="co2_5_group_2">
+             <property name="title">
+              <string>5번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_153">
+              <item>
+               <widget class="QRadioButton" name="co2_5_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_5_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_5_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="co2_6_group_2">
+             <property name="title">
+              <string>6번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_158">
+              <item>
+               <widget class="QRadioButton" name="co2_6_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_6_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_6_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="co2_7_group_2">
+             <property name="title">
+              <string>7번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_157">
+              <item>
+               <widget class="QRadioButton" name="co2_7_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_7_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_7_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QGroupBox" name="co2_8_group_2">
+             <property name="title">
+              <string>8번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_154">
+              <item>
+               <widget class="QRadioButton" name="co2_8_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_8_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_8_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QGroupBox" name="co2_9_group_2">
+             <property name="title">
+              <string>9번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_156">
+              <item>
+               <widget class="QRadioButton" name="co2_9_normal_radio_2">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_9_crc_radio_2">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_9_timing_radio_2">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="solar_tab">
+          <attribute name="title">
+           <string>일사량</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="co2_0_group_3">
+             <property name="title">
+              <string>0번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_161">
+              <item>
+               <widget class="QRadioButton" name="co2_0_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_0_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_0_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="co2_1_group_3">
+             <property name="title">
+              <string>1번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_169">
+              <item>
+               <widget class="QRadioButton" name="co2_1_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_1_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_1_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="co2_2_group_3">
+             <property name="title">
+              <string>2번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_162">
+              <item>
+               <widget class="QRadioButton" name="co2_2_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_2_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_2_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="co2_3_group_3">
+             <property name="title">
+              <string>3번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_170">
+              <item>
+               <widget class="QRadioButton" name="co2_3_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_3_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_3_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QGroupBox" name="co2_4_group_3">
+             <property name="title">
+              <string>4번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_165">
+              <item>
+               <widget class="QRadioButton" name="co2_4_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_4_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_4_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="co2_5_group_3">
+             <property name="title">
+              <string>5번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_163">
+              <item>
+               <widget class="QRadioButton" name="co2_5_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_5_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_5_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="co2_6_group_3">
+             <property name="title">
+              <string>6번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_168">
+              <item>
+               <widget class="QRadioButton" name="co2_6_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_6_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_6_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="co2_7_group_3">
+             <property name="title">
+              <string>7번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_167">
+              <item>
+               <widget class="QRadioButton" name="co2_7_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_7_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_7_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QGroupBox" name="co2_8_group_3">
+             <property name="title">
+              <string>8번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_164">
+              <item>
+               <widget class="QRadioButton" name="co2_8_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_8_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_8_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QGroupBox" name="co2_9_group_3">
+             <property name="title">
+              <string>9번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_166">
+              <item>
+               <widget class="QRadioButton" name="co2_9_normal_radio_3">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_9_crc_radio_3">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_9_timing_radio_3">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="motor_tab">
+          <attribute name="title">
+           <string>DC모터</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="co2_0_group_4">
+             <property name="title">
+              <string>0번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_171">
+              <item>
+               <widget class="QRadioButton" name="co2_0_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_0_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_0_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QGroupBox" name="co2_1_group_4">
+             <property name="title">
+              <string>1번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_179">
+              <item>
+               <widget class="QRadioButton" name="co2_1_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_1_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_1_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QGroupBox" name="co2_2_group_4">
+             <property name="title">
+              <string>2번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_172">
+              <item>
+               <widget class="QRadioButton" name="co2_2_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_2_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_2_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QGroupBox" name="co2_3_group_4">
+             <property name="title">
+              <string>3번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_180">
+              <item>
+               <widget class="QRadioButton" name="co2_3_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_3_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_3_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QGroupBox" name="co2_4_group_4">
+             <property name="title">
+              <string>4번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_175">
+              <item>
+               <widget class="QRadioButton" name="co2_4_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_4_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_4_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QGroupBox" name="co2_5_group_4">
+             <property name="title">
+              <string>5번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_173">
+              <item>
+               <widget class="QRadioButton" name="co2_5_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_5_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_5_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QGroupBox" name="co2_6_group_4">
+             <property name="title">
+              <string>6번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_178">
+              <item>
+               <widget class="QRadioButton" name="co2_6_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_6_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_6_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QGroupBox" name="co2_7_group_4">
+             <property name="title">
+              <string>7번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_177">
+              <item>
+               <widget class="QRadioButton" name="co2_7_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_7_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_7_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QGroupBox" name="co2_8_group_4">
+             <property name="title">
+              <string>8번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_174">
+              <item>
+               <widget class="QRadioButton" name="co2_8_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_8_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_8_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QGroupBox" name="co2_9_group_4">
+             <property name="title">
+              <string>9번</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_176">
+              <item>
+               <widget class="QRadioButton" name="co2_9_normal_radio_4">
+                <property name="text">
+                 <string>정상</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_9_crc_radio_4">
+                <property name="text">
+                 <string>CRC 에러</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="co2_9_timing_radio_4">
+                <property name="text">
+                 <string>타이밍 에러</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <widget class="QGroupBox" name="log_group">
+      <property name="title">
+       <string>Log</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="QPlainTextEdit" name="log_text_edit">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="centerOnScroll">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QGroupBox" name="settings_group">
+      <property name="title">
+       <string>Settings</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_14">
+       <item row="0" column="1">
+        <widget class="QSpinBox" name="timing_delay_spin">
+         <property name="maximum">
+          <number>5000</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>500</number>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>타이밍 에러 Delay(ms)</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>644</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
